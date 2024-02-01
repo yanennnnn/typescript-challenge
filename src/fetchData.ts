@@ -6,4 +6,9 @@
  */
 
 // 請在下方寫下你的程式碼
+export async function fetchData(url:string): Promise<string> {
+  const res = await fetch(url)
+  const data = await res.json()
+  return data
+}
 
