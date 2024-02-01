@@ -10,7 +10,7 @@
  * @param age - 一個需要被分類的年齡
  * @returns - 回傳年齡的分類結果
  */
-enum AgeCategory {
+enum AgeInterval {
     Child = 'Child',
     Teenager = 'Teenager',
     Adult = 'Adult',
@@ -18,15 +18,15 @@ enum AgeCategory {
 }
 export function classifyAge(age: number): string {
     // 請在此處寫下你的程式碼
-    let res: AgeCategory;
+    let res: AgeInterval;
     if ( age <= 12 ) {
-        res = AgeCategory.Child
+        res = AgeInterval.Child
     } else if (age > 12 && age <= 17) {
-        res = AgeCategory.Teenager
+        res = AgeInterval.Teenager
     } else if ( age > 18 && age <= 64) {
-        res = AgeCategory.Adult
+        res = AgeInterval.Adult
     } else {
-        res = AgeCategory.Senior
+        res = AgeInterval.Senior
     }
 
     return res
